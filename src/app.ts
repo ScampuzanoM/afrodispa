@@ -14,7 +14,7 @@ import { readJsonFile } from './utils/utils';
 
 
 
-const PORT = process.env.PORT ?? 3006
+const PORT = process.env.PORT ?? 3001
 
 const jsonData = readJsonFile();
 
