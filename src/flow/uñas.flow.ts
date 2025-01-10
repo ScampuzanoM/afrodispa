@@ -36,28 +36,36 @@ export const uñasFlow = addKeyword<Provider, Database>(['1'])
                     return gotoFlow(direccionFlow)
                 }
                 case '2': {
-                    return await state.update({ servicio: 'Uñas tradicional' })
+                     await state.update({ servicio: 'Uñas tradicional' })
+                     return gotoFlow(direccionFlow)
                 }
                 case '3': {
-                    return await state.update({ servicio: 'Uñas Semipermanente' })
+                     await state.update({ servicio: 'Uñas Semipermanente' })
+                     return gotoFlow(direccionFlow)
                 }
                 case '4': {
-                    return await state.update({ servicio: 'Poligel' })
+                     await state.update({ servicio: 'Poligel' })
+                     return gotoFlow(direccionFlow)
                 }
                 case '5': {
-                    return await state.update({ servicio: 'PressOn' })
+                     await state.update({ servicio: 'PressOn' })
+                     return gotoFlow(direccionFlow)
                 }
                 case '6': {
-                    return await state.update({ servicio: 'Acrilico Esculpido' })
+                     await state.update({ servicio: 'Acrilico Esculpido' })
+                     return gotoFlow(direccionFlow)
                 }
                 case '7': {
-                    return await state.update({ servicio: 'Acrilico TIP' })
+                     await state.update({ servicio: 'Acrilico TIP' })
+                     return gotoFlow(direccionFlow)
                 }
                 case '8': {
-                    return await state.update({ servicio: 'Barrido de Acrilico' })
+                     await state.update({ servicio: 'Barrido de Acrilico' })
+                     return gotoFlow(direccionFlow)
                 }
                 case '9': {
-                    return await state.update({ servicio: 'PediSpa' })
+                     await state.update({ servicio: 'PediSpa' })
+                     return gotoFlow(direccionFlow)
                 }
                 default: {
                     return fallBack('🌟 ¡por favor ingresa una opcion valida! 🌟')

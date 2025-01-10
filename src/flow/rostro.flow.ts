@@ -2,6 +2,7 @@ import { addKeyword } from '@builderbot/bot';
 import { MemoryDB as Database } from '@builderbot/bot';
 import { BaileysProvider as Provider } from '@builderbot/provider-baileys'
 import { reset, stop } from '../idle-custom'
+import { direccionFlow } from './direccion.flow';
 
 
 export const rostroFlow = addKeyword<Provider, Database>(['4'])
@@ -23,10 +24,12 @@ export const rostroFlow = addKeyword<Provider, Database>(['4'])
             const opcion = ctx.body
             switch (opcion) {
                 case '1': {
-                    return await state.update({ servicio: 'Limpieza facial profunda' })
+                     await state.update({ servicio: 'Limpieza facial profunda' })
+                    return gotoFlow(direccionFlow)
                 }
                 case '2': {
-                    return await state.update({ servicio: 'Peelling' })
+                     await state.update({ servicio: 'Peelling' })
+                     return gotoFlow(direccionFlow)
                 }
                 default: {
                     return fallBack('🌟 ¡por favor ingresa una opcion valida! 🌟')

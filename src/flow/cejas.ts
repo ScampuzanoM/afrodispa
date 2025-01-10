@@ -2,6 +2,7 @@ import { addKeyword } from '@builderbot/bot';
 import { MemoryDB as Database } from '@builderbot/bot';
 import { BaileysProvider as Provider } from '@builderbot/provider-baileys'
 import { reset, stop } from '../idle-custom'
+import { direccionFlow } from './direccion.flow';
 
 
 export const cejasFlow = addKeyword<Provider, Database>(['3'])
@@ -24,13 +25,16 @@ export const cejasFlow = addKeyword<Provider, Database>(['3'])
             const opcion = ctx.body;
             switch (opcion) {
                 case '1': {
-                    return await state.update({ servicio: 'Cejas con Diseño y epilación' })
+                     await state.update({ servicio: 'Cejas con Diseño y epilación' })
+                     return gotoFlow(direccionFlow)
                 }
                 case '2': {
-                    return await state.update({ servicio: 'Cejas con Laminado' })
+                     await state.update({ servicio: 'Cejas con Laminado' })
+                     return gotoFlow(direccionFlow)
                 }
                 case '3': {
-                    return await state.update({ servicio: 'Cejas con Hena' })
+                    await state.update({ servicio: 'Cejas con Hena' })
+                    return gotoFlow(direccionFlow)
                 }
                 default: {
                     return fallBack('🌟 ¡por favor ingresa una opcion valida! 🌟')

@@ -2,6 +2,7 @@ import { addKeyword } from '@builderbot/bot';
 import { BaileysProvider as Provider } from '@builderbot/provider-baileys'
 import { reset, stop } from '../idle-custom'
 import { MemoryDB as Database } from '@builderbot/bot';
+import { direccionFlow } from './direccion.flow';
 
 
 export const pestañasFlow = addKeyword<Provider, Database>(['2'])
@@ -28,16 +29,20 @@ export const pestañasFlow = addKeyword<Provider, Database>(['2'])
             const opcion = ctx.body;
             switch (opcion) {
                 case '1': {
-                    return await state.update({ servicio: 'Pestañas Pelo a Pelo' })
+                     await state.update({ servicio: 'Pestañas Pelo a Pelo' })
+                     return gotoFlow(direccionFlow)
                 }
                 case '2': {
-                    return await state.update({ servicio: 'Pestañas Punto a punto' })
+                     await state.update({ servicio: 'Pestañas Punto a punto' })
+                     return gotoFlow(direccionFlow)
                 }
                 case '3': {
-                    return await state.update({ servicio: 'Pestañas en tira' })
+                     await state.update({ servicio: 'Pestañas en tira' })
+                     return gotoFlow(direccionFlow)
                 }
                 case '4': {
-                    return await state.update({ servicio: 'Pestañas Lifting' })
+                     await state.update({ servicio: 'Pestañas Lifting' })
+                     return gotoFlow(direccionFlow)
                 }
                 default: {
                     return fallBack('🌟 ¡por favor ingresa una opcion valida! 🌟')
