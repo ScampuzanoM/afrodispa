@@ -9,9 +9,10 @@ const idleFlow = addKeyword(EVENTS.ACTION).addAction(
     async (_, { endFlow }) => {
         return endFlow(
             '¡Hola! 😊\n' +
-            'Estamos aquí para ayudarte a encontrar el termo perfecto. Aún no hemos recibido una respuesta tuya, pero seguimos atentos.\n' +
-            '¿Te interesa un termo de acero inoxidable, un diseño especial, o uno con aislamiento superior? 🧐\n' +
-            'Explora nuestras opciones y encuentra el que más te guste. Visítanos en nuestro Instagram mientras decides: https://www.instagram.com/lafabricadelostermos'
+            'Gracias por contactarnos. Estamos aquí para ayudarte a encontrar el momento perfecto de relajación y bienestar. 🧖‍♀️✨\n' +
+            'Aún no hemos recibido una respuesta tuya, pero seguimos atentos para resolver tus dudas o recomendarte el tratamiento ideal.\n' +
+            '¿Te interesa un masaje relajante, un facial rejuvenecedor, o tal vez una experiencia completa de spa? 🧐\n' +
+            'Explora nuestras opciones y elige el plan que más te inspire. Mientras decides, te invitamos a visitar nuestro Instagram y conocer más sobre nuestros servicios: https://www.instagram.com/afroditaspa_pereira/'
         );
     }
 );
